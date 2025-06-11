@@ -54,7 +54,7 @@ const Section = () => {
             <div className="flex-1 relative p-8 lg:p-0">
               <div className="relative w-full max-w-[500px] mx-auto">
                 {/* Background Phone */}
-                <div className="absolute md:top-10 md:left-40 z-0">
+                <div className="absolute top-10 left-5 lg:top-20 md:-top-20 md:left-3 lg:left-40 z-0">
                   
                    <img
                     src={bodyImage}
@@ -64,11 +64,11 @@ const Section = () => {
                 </div>
 
                 {/* Front Phone */}
-                <div className="relative md:right-[345px] md:top-52 top-[500px] z-10">
+                <div className="relative md:top-[330px] lg:right-[345px] lg:top-60 top-[500px] z-10">
                  <img
                     src={iPhoneMockup}
                     alt="iPhone Mockup"
-                    className="w-full h-auto max-w-[320px] ml-auto"
+                    className="w-full h-auto md:max-w-[260px] max-w-[320px] ml-auto"
                   />
                 </div>
               </div>

@@ -83,20 +83,20 @@ const Footer = () => {
             <div className="flex-1 relative p-8 lg:p-0">
               <div className="relative w-full max-w-[500px] mx-auto">
                 {/* Background Phone */}
-                <div className="absolute md:-top-14 md:left-40 z-0">
+                <div className="absolute lg:-top-14 md:-top-15 md:right-[0px] lg:left-40 z-0">
                   <img
                     src={phoneInterface1}
                     alt="Phone Interface"
-                    className="w-full h-auto max-w-[245px]"
+                    className="w-full h-auto lg:max-w-[245px] md:max-w-[130px]"
                   />
                 </div>
 
                 {/* Front Phone */}
-                <div className="relative md:right-[345px] md:top-[132px] top-[421px] z-10">
+                <div className="relative lg:right-[345px] lg:top-[132px] md:right-[0px] md:top-[182px] top-[421px] z-10">
                   <img
                     src={phoneInterface2}
                     alt="iPhone Mockup"
-                    className="w-full h-auto max-w-[230px] ml-auto"
+                    className="w-full h-auto max-w-[230px] lg:max-w-[230px] md:max-w-[130px]  ml-auto"
                   />
                 </div>
               </div>

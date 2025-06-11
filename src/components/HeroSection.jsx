@@ -5,7 +5,7 @@ import logoDecoration from "../assets/Group 12.png";
 const HeroSection = () => {
   return (
     <div className="md:h-[104vh] h-[140vh] bg-[#FF5349] w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6  md:px-10 lg:px-8 py-6">
         {/* Centered Logo */}
         <div className="flex justify-center items-center md:mb-10 mb-16">
           <div className="flex items-center">
@@ -18,9 +18,9 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between md:mb-8 gap-12">
           {/* Left Content */}
-          <div className="flex-1 text-white md:-mt-44 -mt-10">
+          <div className="flex-1 text-white md:-mt-10 lg:-mt-45 ">
             {/* Main Heading */}
             <h1 className="text-3xl md:text-5xl text-[#FAFAFA] lg:text-5xl font-bold leading-tight mb-6">
               <span className="block">Stay Connected</span>
@@ -30,7 +30,10 @@ const HeroSection = () => {
 
             {/* Description */}
             <p className="text-lg md:text-xl mb-6 text-[#FAFAFA] max-w-xl">
-              A place where friendships grow, communities thrive, and moments turn into unforgettable experiences. Whether you're looking to reconnect with old friends, build new relationships, or share what matters most to you MyBindle is your home on the internet.
+              A place where friendships grow, communities thrive, and moments
+              turn into unforgettable experiences. Whether you're looking to
+              reconnect with old friends, build new relationships, or share what
+              matters most to you MyBindle is your home on the internet.
             </p>
 
             {/* CTA Button */}
@@ -43,7 +46,7 @@ const HeroSection = () => {
           <div className="flex-1 relative ms-8 md:ms-0">
             <div className="relative">
               {/* Phone mockup */}
-              <div className="relative w-[280px] md:w-[320px] mx-auto">
+              <div className="relative w-[280px] md:w-[340px] mx-auto">
                 <img
                   src={phoneMockup}
                   alt="Phone mockup"
