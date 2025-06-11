@@ -1,70 +1,78 @@
 import React from "react";
+import EmilyImg from "../assets/Avatar.png";
+import AmitImg from "../assets/Avatar (1).png";
+import SophieImg from "../assets/Avatar (2).png";
+import JaveriaImg from "../assets/Avatar (3).png";
+import lucasImg from "../assets/Avatar (4).png";
+import NaraImg from "../assets/Avatar (5).png";
 
 const Testimonial = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      country: "United States",
-      image: "https://randomuser.me/api/portraits/women/1.jpg",
-      text: "MyBindle has transformed how I connect with friends. The interface is intuitive and the features are exactly what I needed!",
+      name: "Emily R",
+      country: "USA",
+      image: EmilyImg,
+      text: "This platform changed the way I stay in touch with my friends and family. The interface is smooth, and I love how easy it is to share my moments!",
       rating: 5,
     },
     {
-      name: "Raj Patel",
+      name: "Amit K",
       country: "India",
-      image: "https://randomuser.me/api/portraits/men/2.jpg",
-      text: "This app makes sharing moments with family so easy. I love how seamless everything works together.",
+      image: AmitImg,
+      text: "Finally, a social network that understands what I need! The privacy features are a game-changer, and I feel safer sharing my life online",
       rating: 5,
     },
     {
-      name: "Emma Thompson",
-      country: "United Kingdom",
-      image: "https://randomuser.me/api/portraits/women/3.jpg",
-      text: "Finally found a social platform that prioritizes genuine connections. The community here is amazing!",
+      name: "Sophie M",
+      country: "UK",
+      image: SophieImg,
+      text: "I joined just to explore, but now I can't imagine my day without it. The real-time chat and engaging communities make every interaction special!",
       rating: 5,
     },
     {
-      name: "Carlos Rodriguez",
+      name: "Javier L",
       country: "Spain",
-      image: "https://randomuser.me/api/portraits/men/4.jpg",
-      text: "The features are innovative and the user experience is top-notch. Highly recommend!",
+      image: JaveriaImg,
+      text: "Running my small business has never been easier! This platform helped me connect with customers, promote my products, and grow my brand",
       rating: 5,
     },
     {
-      name: "Maria Silva",
+      name: "Lucas T",
       country: "Brazil",
-      image: "https://randomuser.me/api/portraits/women/5.jpg",
-      text: "Love how easy it is to discover new communities and connect with like-minded people.",
+      image: lucasImg,
+      text: "The perfect blend of fun and functionality! Whether I want to go live, discover trending content, or just catch up with friends, everything is right here!",
       rating: 5,
     },
     {
-      name: "Michael Chen",
+      name: "Nara S",
       country: "Canada",
-      image: "https://randomuser.me/api/portraits/men/6.jpg",
-      text: "The best social networking app I've used. Clean interface and great privacy features!",
+      image: NaraImg,
+      text: "I've tried many social platforms, but this one truly stands out! The experience feels personal, the connections feel real, and every feature just makes sense",
       rating: 5,
     },
   ];
 
   return (
-    <div className="bg-gray-50 py-16 lg:py-20">
+    <div className="bg-[#F2F2F2] py-10 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#222222] mb-4">
             What Our Users Say
           </h2>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:mx-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center text-center gap-5 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="p-6 w-[100%] rounded-2xl bg-[#F2F2F2] backdrop-blur-md text-center
+             shadow-[4px_4px_10px_rgba(0,0,0,0.1),-3px_-3px_7px_#FFFFFF]
+             transition duration-300"
             >
               {/* Star Rating */}
-              <div className="flex mb-4">
+              <div className="flex mb-4 text-start">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg
                     key={i}
@@ -78,10 +86,12 @@ const Testimonial = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-600 mb-6">"{testimonial.text}"</p>
+              <p className="text-[#212121] mb-6 font-[600] text-start">
+                {testimonial.text}
+              </p>
 
               {/* User Info */}
-              <div className="flex items-center">
+              <div className="flex text-start">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -98,10 +108,52 @@ const Testimonial = () => {
           ))}
         </div>
 
+        {/* Extra faded cards row preview */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between items-center text-center gap-4 mt-[-40px] md:ms-16 pointer-events-none opacity-50 select-none">
+          <div
+            className="p-5 w-[94%] h-[24vh] rounded-2xl bg-[#F2F2F2] backdrop-blur-md text-center
+  shadow-[4px_4px_10px_rgba(0,0,0,0.1),-3px_-3px_7px_#FFFFFF] transition duration-300 overflow-hidden"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 30%, transparent 60%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 5%, transparent 80%)",
+            }}
+          >
+            <p className="text-[#212121] mb-6 font-[500] text-start">
+              This platform brings people closer in the best way possible! From
+              reconnecting with old friends to making new ones, every moment
+              here feels special.
+            </p>
+          </div>
+
+          {/* Faded card 2 */}
+          <div
+            className="p-5 w-[94%] md:-mt-0 -mt-14 md:ms-[346px] h-[24vh] rounded-2xl bg-[#F2F2F2] backdrop-blur-md text-center
+  shadow-[4px_4px_10px_rgba(0,0,0,0.1),-3px_-3px_7px_#FFFFFF] transition duration-300 overflow-hidden"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 30%, transparent 60%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 5%, transparent 80%)",
+            }}
+          >
+            <p className="text-[#212121] md:mb-6 font-[500] text-start">
+              A social network that actually listens to its users! The design is
+              sleek, the features are powerful, and the experience is seamless.
+              I'm hooked!
+            </p>
+          </div>
+        </div>
+
         {/* See More Button */}
-        <div className="text-center">
-          <button className="text-[#FF4E4E] font-semibold text-lg hover:text-red-600 transition-colors duration-300">
-            See More Reviews
+        <div className="text-center md:-mt-14 -mt-8">
+          <button
+            className="p-3 md:w-[16%] w-[100%] rounded-xl font-[700] text-[#FF5349] bg-[#F2F2F2] backdrop-blur-md text-center
+             shadow-[4px_4px_10px_rgba(0,0,0,0.1),-3px_-3px_7px_#FFFFFF]
+             transition duration-300"
+          >
+            See More
           </button>
         </div>
       </div>

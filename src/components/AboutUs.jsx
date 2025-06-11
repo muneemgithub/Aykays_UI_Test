@@ -21,22 +21,18 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen px-6 py-16 flex flex-col lg:flex-row items-center justify-center gap-12">
+    <div className="bg-[#F2F2F2] w-full min-h-screen md:px-28 px-4 py-10 flex flex-col md:flex-row items-center justify-center gap-12">
       {/* Left Side - Mobile Images */}
-      <div className="relative w-full max-w-md flex justify-center">
-        <img
-          src={leftImage}
-          alt="Phone Mockup 1"
-          className="w-40 sm:w-48 md:w-56 rotate-[12deg] z-10"
-        />
+      <div className="md:w-[50%] w-[100%]">
+        <img src={leftImage} alt="Phone Mockup 1" />
       </div>
 
       {/* Right Side - Text + Features */}
-      <div className="flex-1 max-w-2xl">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+      <div className="md:w-[50%] w-[100%] p-2">
+        <h2 className="text-3xl md:text-[40px] font-[700] text-[#222222] mb-4">
           Where Every Click Sparks a Connection!
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="text-[#525252] mb-8 font-[600]">
           A small act of kindness today can create a lifetime of impact for
           someone in need. Give from the heart and change a life!
         </p>
@@ -45,19 +41,22 @@ const AboutUs = () => {
           {features.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl border border-transparent hover:border-blue-500 transition-all duration-300 cursor-pointer group"
+              className="p-8 rounded-2xl bg-[#F2F2F2] backdrop-blur-md text-center
+             shadow-[4px_4px_10px_rgba(0,0,0,0.1),-3px_-3px_6px_#FFFFFF]
+             transition duration-300"
             >
-              <div className="flex items-start gap-4">
-                <span className="text-3xl group-hover:scale-110 transition-transform duration-200">
-                  {item.emoji}
-                </span>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600">
+              <div className="flex  flex-col items-start gap-1">
+                <div className="flex flex-row justify-start items-center">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-200">
+                    {item.emoji}
+                  </span>
+                  <h3 className="md:text-lg text-[17px] font-bold text-[#222222] group-hover:text-blue-600">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 mt-1 group-hover:text-gray-800">
-                    {item.desc}
-                  </p>
+                </div>
+
+                <div>
+                  <p className="font-[600] mt-1 text-[#525252] text-start">{item.desc}</p>
                 </div>
               </div>
             </div>

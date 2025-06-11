@@ -23,15 +23,16 @@ const InstallApp = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+    <div className="bg-[#F2F2F2] py-16 lg:py-20">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#222222] mb-4">
           How to Install Our App
         </h2>
+        <p className='text-center mb-6 text-[#222222] font-[600] text-sm'>Getting started is quick and easy! Follow these simple steps to install and start using MyBindle today.</p>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 relative">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           {/* Connecting Lines - Only visible on desktop */}
-          <div className="hidden lg:block absolute top-[60px] left-[25%] right-[25%] h-[2px] bg-gray-200 -z-10"></div>
+          <div className="hidden lg:block top-[60px] left-[25%] right-[25%] h-[5px] bg-[#000] -z-10"></div>
 
           {/* Steps */}
           {steps.map((step, index) => (
@@ -40,29 +41,24 @@ const InstallApp = () => {
               className="w-full lg:w-1/3 flex flex-col items-center"
             >
               {/* Step Number */}
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-6 shadow-lg
-                ${step.isFirst ? 'text-black' : ' text-gray-800'}`}
+              <div className={`w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6
+                ${step.isFirst ? 'text-[#FF5349]' : ' text-[#222222]'}`}
               >
                 {step.number}
               </div>
 
               {/* Step Content */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg w-full max-w-sm hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">
+              <div className="p-6 rounded-2xl bg-[#F2F2F2] backdrop-blur-md text-center
+             shadow-[4px_4px_10px_rgba(0,0,0,0.1),-2px_-2px_6px_#FFFFFF]
+             transition duration-300">
+                <h3 className="text-xl font-bold text-[#222222] mb-2 text-center">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 text-center">
+                <p className="text-[#222222] text-center font-bold text-sm">
                   {step.description}
                 </p>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* Mobile Connecting Lines */}
-        <div className="lg:hidden flex flex-col items-center gap-4">
-          {[1, 2].map((line) => (
-            <div key={line} className="w-[2px] h-8 bg-gray-200"></div>
           ))}
         </div>
       </div>
